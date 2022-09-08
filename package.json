@@ -23,7 +23,7 @@
 		"prepublish": "npm publish --dry-run"
 	},
 	"bin": {
-		"project-cli": "./dist/index"
+		"project-cli": "./dist/index.js"
 	},
 	"keywords": [],
 	"author": "Chew Han Xiang <hello@chewhx.com>",
