@@ -15,6 +15,11 @@ const prompt = createPromptModule();
 
 	const { template, name, packagemanager } = answers;
 
+	if (!name) {
+		console.log(red(`🚨 Error: Project name cannot be blank`));
+		return;
+	}
+
 	const templatePath = join(TEMPLATE_PATH, template);
 	const targetPath = join(CURRENT_DIR, name);
 
