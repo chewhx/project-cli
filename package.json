@@ -1,0 +1,48 @@
+{
+	"name": "@chewhx/project-cli",
+	"version": "1.0.0",
+	"description": "CLI for generating project templates",
+	"main": "dist/index.js",
+	"exports": {
+		"require": "./dist/index.js",
+		"import": "./dist/index.mjs",
+		"types": "./dist/index.d.ts"
+	},
+	"files": [
+		"dist",
+		"templates"
+	],
+	"engines": {
+		"node": ">=14"
+	},
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "ts-node src/index.ts",
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"prepublish": "npm publish --dry-run"
+	},
+	"bin": {
+		"project-cli": "./dist/index"
+	},
+	"keywords": [],
+	"author": "Chew Han Xiang <hello@chewhx.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/ejs": "^3.1.1",
+		"@types/fs-extra": "^9.0.13",
+		"@types/inquirer": "^9.0.1",
+		"@types/node": "^18.7.15",
+		"@types/shelljs": "^0.8.11",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.2"
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"ejs": "^3.1.8",
+		"fs-extra": "^10.1.0",
+		"inquirer": "8",
+		"ora": "^5.4.1",
+		"shelljs": "^0.8.5"
+	}
+}
