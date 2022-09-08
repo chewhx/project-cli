@@ -2,10 +2,8 @@ import { readdirSync } from 'fs-extra';
 import { QuestionCollection } from 'inquirer';
 import { join } from 'path';
 
-export const TEMPLATE_PATH = 'templates';
-export const TEMPLATE_PRESETS: string[] = readdirSync(
-	join(__dirname, '..', TEMPLATE_PATH)
-);
+export const TEMPLATE_PATH = join(__dirname, '..', 'templates');
+export const TEMPLATE_PRESETS: string[] = readdirSync(TEMPLATE_PATH);
 export const CURRENT_DIR: string = process.cwd();
 
 export interface TAnswers {
