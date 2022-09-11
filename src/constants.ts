@@ -32,13 +32,14 @@ export const QUESTIONS: QuestionCollection<TAnswers> = [
 		validate: (_input: string) => {
 			const input = _input.trim();
 
+			if (!input || !input.length) {
+				return 'Please provide a valid project name';
+			}
+
 			if (existsSync(join(CURRENT_DIR, input))) {
 				return `Folder already exists. Delete or use another name.`;
 			}
 
-			if (!input || !input.length) {
-				return 'Please provide a valid project name';
-			}
 			return true;
 		},
 	},
