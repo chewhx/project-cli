@@ -1,16 +1,22 @@
 # Introduction
 
-Generate project templates on command line for:
+A command line interface tool to create project templates. 
+- Not having to install the same packages
+- Not having to hunt down the typescript config
+- Not having to recall which dependencies are needed for server and for npm packages
 
-- express-typescript applications
-- npmjs packages (written in typescript)
+## Templates
+
+- express-ts: express server application written and built from typescript
+- npm-ts: write and publish npm packages in typescript
+- ts-playground: fire up a playground to write or experiment in typescript
 
 # Installation
 
 ```bash
 npm install -g @chewhx/project-cli
 ```
-
+ 
 # Run without installation
 
 ```bash
@@ -25,6 +31,7 @@ project-cli
 ? Select project template: (Use arrow keys)
 ❯ express-ts
   npm-ts
+  ts-playground
 ```
 
 # Reference
